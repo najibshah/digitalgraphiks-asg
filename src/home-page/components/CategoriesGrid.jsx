@@ -11,17 +11,14 @@ export function CategoriesGrid() {
         rowSpacing={1}
         sx={{
           textAlign: "center",
-          pt: 2.5,
+          py: 2.5,
         }}
       >
         {categoryGridImages.map((imageData, index) => (
           <Grid item xs={3}>
-            <img src={imageData.image} alt="" />
+            <img src={imageData.image} alt="" style={{ width: "80%" }} />
           </Grid>
         ))}
-        <Grid item xs={3} style={{ textAlign: "center" }}>
-          <img src="" alt="" />
-        </Grid>
       </Grid>
     </Box>
   );
