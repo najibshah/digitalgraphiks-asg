@@ -1,33 +1,40 @@
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
+import CssBaseline from "@mui/material/CssBaseline";
 
 import homepageAdBanner from "./assets/homepageTopBanner.png";
 import mobilePromotionBanner from "./assets/mobilePromotionBanner.jpeg";
 
-import { PromotionSlider, FashionBanner, CategoriesSlider } from "./";
+import {
+  PromotionSlider,
+  FashionBanner,
+  CategoriesSlider,
+  CategoriesGrid,
+  RecommendationSlider,
+} from "./";
 
 export function HomePage() {
   return (
     <Box>
-      {/* homepage promocode banner */}
+      <CssBaseline />
       <Link href="/">
         <img src={homepageAdBanner} alt="" style={{ width: "100%" }} />
       </Link>
       <Link href="/" sx={{ display: { xs: "flex", md: "none" } }}>
         <img src={mobilePromotionBanner} alt="" style={{ width: "100%" }} />
       </Link>
-      <Grid container sx={{ pl: { xs: 0, md: 8 } }}>
-        {/* homepage promotion slider */}
-        <Grid item xs={12} md={8}>
+      <Grid container>
+        <Grid item sx={{ width: { xs: "100%", md: "70%" } }}>
           <PromotionSlider />
         </Grid>
-        {/* homepage fashion banner */}
-        <Grid item md={4} sx={{ display: { xs: "none", md: "flex" } }}>
+        <Grid item sx={{ display: { xs: "none", md: "flex" }, width: "30%" }}>
           <FashionBanner />
         </Grid>
       </Grid>
       <CategoriesSlider />
+      <CategoriesGrid />
+      <RecommendationSlider />
     </Box>
   );
 }

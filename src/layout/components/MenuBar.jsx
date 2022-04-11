@@ -36,12 +36,20 @@ export function MenuBar() {
             <Button
               variant="text"
               sx={{
-                color: "black",
-                fontWeight: "600",
                 pr: 1,
               }}
             >
-              Categories <ExpandMoreIcon />
+              <span
+                style={{
+                  padding: 10,
+                  fontSize: "13px",
+                  fontWeight: "600",
+                  color: "#3866DE",
+                }}
+              >
+                All Categories{" "}
+              </span>
+              <ExpandMoreIcon />
             </Button>
             {buttonList.map((buttonData, index) => {
               return (
@@ -53,10 +61,10 @@ export function MenuBar() {
                   <Button
                     variant="text"
                     sx={{
-                      fontSize: "12px",
+                      fontSize: "13px",
                       color: "black",
                       fontWeight: "600",
-                      pr: 1,
+                      p: "0 15px",
                     }}
                   >
                     {buttonData.label}

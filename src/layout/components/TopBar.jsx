@@ -9,6 +9,8 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CssBaseline from "@mui/material/CssBaseline";
 import AppLogo from "../../assets/logo192.svg";
+import countryFlag from "../../assets/ae.svg";
+
 import { SearchField } from "./";
 
 export function TopBar() {
@@ -31,11 +33,21 @@ export function TopBar() {
             variant="text"
             sx={{
               display: { xs: "none", md: "flex" },
-              color: "black",
-              textTransform: "capitalize",
             }}
           >
-            Deliver To Dubai <ExpandMoreIcon />
+            <img src={countryFlag} alt="" />
+            <p
+              style={{
+                margin: "0 0 0 10px",
+                fontSize: "11px",
+                color: "black",
+                textAlign: "initial",
+                textTransform: "capitalize",
+              }}
+            >
+              Deliver to <b>Dubai</b>
+            </p>
+            <ExpandMoreIcon />
           </Button>
           <SearchField />
           <Box sx={{ flexGrow: 1 }} />
@@ -44,13 +56,21 @@ export function TopBar() {
               variant="text"
               sx={{ color: "black", textTransform: "capitalize" }}
             >
-              Sign In <FaceIcon sx={{ fontSize: 20, ml: 1 }} />
+              <b> العربية </b>
+            </Button>
+
+            <Button
+              variant="text"
+              sx={{ color: "black", textTransform: "capitalize" }}
+            >
+              <b> Sign In </b>
+              <FaceIcon sx={{ fontSize: 20, ml: 1 }} />
             </Button>
             <Button
               variant="text"
               sx={{ color: "black", textTransform: "capitalize" }}
             >
-              Cart <ShoppingCartIcon sx={{ fontSize: 20, ml: 1 }} />
+              <b>Cart</b> <ShoppingCartIcon sx={{ fontSize: 20, ml: 1 }} />
             </Button>
           </Box>
         </Toolbar>

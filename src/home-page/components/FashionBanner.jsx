@@ -5,7 +5,7 @@ import fashionBannerWomen from "../assets/fashionBannerRight.png";
 
 export function FashionBanner() {
   return (
-    <Grid container sx={{ pr: 8 }}>
+    <Grid container>
       <Grid item xs={6}>
         <Link href="/mensFashion">
           <img src={fashionBannerMen} alt="" style={{ width: "100%" }} />
