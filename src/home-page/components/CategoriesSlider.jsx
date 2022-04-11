@@ -17,7 +17,7 @@ export function CategoriesSlider() {
     infinite: true,
     speed: 500,
     slidesToScroll: 1,
-    slidesPerRow: 8,
+    slidesPerRow: 7,
     rows: 1,
     centerMode: true,
     dots: true,
@@ -26,7 +26,7 @@ export function CategoriesSlider() {
       {
         breakpoint: 320,
         settings: {
-          slidesPerRow: 1,
+          slidesPerRow: 2,
           slidesToScroll: 1,
           rows: 2,
           infinite: true,
@@ -34,7 +34,7 @@ export function CategoriesSlider() {
       },
       {
         breakpoint: 768,
-        settings: { slidesPerRow: 3, rows: 2, infinite: true },
+        settings: { slidesPerRow: 2, rows: 2, infinite: true },
       },
       {
         breakpoint: 1024,
@@ -43,7 +43,7 @@ export function CategoriesSlider() {
     ],
   };
   return (
-    <div style={{ marginTop: 40 }}>
+    <div style={{ marginTop: 40, marginBottom: 100 }}>
       {/* slider requires some more fine tuning for better responsiveness but i am running out of time. Fixable 
       but chosing not to fix to prevent delays */}
       <Slider {...settings}>
